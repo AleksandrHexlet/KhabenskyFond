@@ -4,7 +4,14 @@
       <div :class="['modalWindow', className]">
         <div class="overlay"></div>
         <div :class="['popup', className]">
+          <img
+            class="icon__close"
+            @click="$store.commit('popup/close')"
+            src="/images/icon__close.svg"
+            alt="Кнопка закрытия формы отправки сообщения"
+          />
           <popupQuiz />
+          <slot></slot>
         </div>
       </div>
     </div>
@@ -18,9 +25,9 @@ import popupQuiz from '@/components/popupQuiz';
 // import optionSecond from '@/components/ui/optionSecond';
 export default {
   props: ['className'],
-  components: {
-    popupQuiz,
-  },
+  // components: {
+  //   popupQuiz,
+  // },
 };
 </script>
 
@@ -155,5 +162,53 @@ export default {
   color: #fff;
   margin: auto;
   padding: 0;
+}
+.icon__close {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 739px;
+  right: 299px;
+  border: 0;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+@media all and (max-width: 1279px) {
+  .icon__close {
+    width: 17.36px;
+    top: 265px;
+    left: 977px;
+    position: absolute;
+  }
+}
+
+@media all and (max-width: 1023px) {
+  .icon__close {
+    width: 17.36px;
+    top: 278px;
+    left: 857px;
+    position: absolute;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .icon__close {
+    width: 20px;
+    height: 20px;
+    top: 267px;
+    left: 617px;
+    position: absolute;
+  }
+}
+
+@media all and (max-width: 455px) {
+  .icon__close {
+    width: 20px;
+    height: 20px;
+    top: 250px;
+    left: 335px;
+    position: absolute;
+  }
 }
 </style>

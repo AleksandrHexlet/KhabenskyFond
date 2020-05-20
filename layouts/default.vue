@@ -10,7 +10,7 @@
     <break-line class="break-line" />
     <main-header />
 
-    <popup v-if="this.$store.state.popup.popupShown"></popup>
+    <popup v-if="this.$store.state.popup.popupShown"><popupQuiz /></popup>
     <nuxt />
     <main-footer />
   </div>
@@ -23,6 +23,7 @@ import MobileMenu from '@/components/MobileMenu';
 import Header from '@/components/Header';
 import popup from '@/components/popup';
 import Footer from '@/components/Footer';
+import popupQuiz from '@/components/popupQuiz';
 
 export default {
   components: {
@@ -32,6 +33,7 @@ export default {
     'main-header': Header,
     popup,
     'main-footer': Footer,
+    popupQuiz,
   },
   computed: {
     isMobileMenuOpened() {

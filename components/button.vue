@@ -10,7 +10,7 @@
     @click="handleClick"
     :disabled="disabled"
   >
-    <slot></slot>
+    <slot class="buttonNext__description">123456789</slot>
   </button>
 </template>
 
@@ -45,6 +45,21 @@ export default {
 .button_disabled {
   opacity: 0.3;
   cursor: not-allowed;
+}
+
+.buttonNext__description {
+  display: flex;
+  /* width: 16px;
+  height: 10px; */
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #ffffff;
+  margin: auto;
+  padding: 0;
 }
 </style>
 

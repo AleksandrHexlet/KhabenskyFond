@@ -3,12 +3,12 @@
     <h3 class="popup__step">
       {{ currentQuestion.step }}
     </h3>
-    <img
+    <!-- <img
       class="icon__close"
       @click="$store.commit('popup/close')"
       src="/images/icon__close.svg"
       alt="Кнопка закрытия формы отправки сообщения"
-    />
+    /> -->
 
     <p class="popup__questions_block">
       <span class="popup__question">{{ currentQuestion.question }}</span>
@@ -27,7 +27,7 @@
       >
 
       <Button @custom-click="nextQuestion" class="buttonNext" type="button">
-        <p class="buttonNext__description">Далее</p>
+        <!-- <p class="buttonNext__description"></p> -->
       </Button>
     </div>
   </div>
